@@ -36,20 +36,35 @@
       list-style-type: none;
       margin: 0;
       padding: 0;
+      display: flex;
+      width: 200px;
     }
 
-    li {
+    li a{
       display: block;
       width: 60px;
+      padding: 8px 16px
     }
+
+    /* li a.active {     // DONT BELIEVE THIS IS WORKING
+      background-color: #4caf50;
+      color: white;
+    } */
+
+    /*link color change on hover */    /* REMOVED THE ACTIVE PORTION */
+    li a:hover {
+      background-color: #2f1669;
+      color:white;
+    }
+
 
   </style>
   <body>
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#photos">Photos</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
       <li><a href="#classes">Classes</a></li>
-      <li><a href="#hobies">Hobies</a></li>
     </ul>
     <div>
     <h1> John Brown </h1>
@@ -68,28 +83,31 @@
     <div>
     <h3>My Interests</h3>
       <p>Fishing and getting outdoors! Live music and shows draw me in too.</p>
-      <p>Video games, I run a large guild with my brother!</p>
+      <p>Video games, I run a large gaming guild with my brother!</p>
       <p>Spending time with my dogs, family, and friends. Usually around a grill.</p>
     </div>
 
-    <h3>Summer Class List</h3> 
+    <div>
+    <h3>Summer Class List</h3>
+    </div>
+
     <div>
       <table>
         <tr>
-          <th><P>Course Code</P></th>
-          <th><P>Course Name</P></th>
+          <th><p>Course Code</p></th>
+          <th><p>Course Name</p></th>
         </tr>
         <tr>
-          <td><P>CMPS262</P></td>
-          <td><P>Advanced Programming</P></td>
+          <td><p>CMPS262</p></td>
+          <td><p>Advanced Programming</p></td>
         </tr>
         <tr>
-          <td><P>CMPS260</P></td>
-          <td><P>Data Structures and Algorithms</P></td>
+          <td><p>CMPS260</p></td>
+          <td><p>Data Structures and Algorithms</p></td>
         </tr>
         <tr>
-          <td><P>Comm101</P></td>
-          <td><P>Oral Communication</P></td>
+          <td><p>Comm101</p></td>
+          <td><p>Oral Communication</p></td>
         </tr>
       </table>
     </div>
