@@ -32,8 +32,25 @@
       justify-content: center;
     }
 
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: block;
+      width: 60px;
+    }
+
   </style>
   <body>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#classes">Classes</a></li>
+      <li><a href="#hobies">Hobies</a></li>
+    </ul>
     <div>
     <h1> John Brown </h1>
     </div>
@@ -50,19 +67,17 @@
 
     <div>
     <h3>My Interests</h3>
-      <ul>
-        <li>Fishing and getting outdoors! Live music and shows draw me in too.</li>
-        <li>Video games, I run a large guild with my brother!</li>
-        <li>Spending time with my dogs, family, and friends. Usually around a grill.</li>
-      </ul>
+      <p>Fishing and getting outdoors! Live music and shows draw me in too.</p>
+      <p>Video games, I run a large guild with my brother!</p>
+      <p>Spending time with my dogs, family, and friends. Usually around a grill.</p>
     </div>
 
     <h3>Summer Class List</h3> 
     <div>
       <table>
         <tr>
-          <td><P>Course Code</P></td>
-          <td><P>Course Name</P></td>
+          <th><P>Course Code</P></th>
+          <th><P>Course Name</P></th>
         </tr>
         <tr>
           <td><P>CMPS262</P></td>
