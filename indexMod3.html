@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> My Personal Page! </title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <style>
+    body {
+      background-color: #9b9c9c;
+      color: #244b81;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #192d55;
+      text-align: center;
+      font-size: xx-large;
+    }
+
+    h3, h4 {
+      color: #213250;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 3px;
+    }
+
+    p {
+      font-style: italic;
+      font-size: 16px;
+    }
+
+    .profile-pic {
+      display: flex;
+      justify-content: center;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      width: 200px;
+    }
+
+    li a{
+      display: block;
+      width: 60px;
+      padding: 8px 16px
+    }
+
+    /* li a.active {     // DONT BELIEVE THIS IS WORKING
+      background-color: #4caf50;
+      color: white;
+    } */
+
+    /*link color change on hover */    /* REMOVED THE ACTIVE PORTION */
+    li a:hover {
+      background-color: #2f1669;
+      color:white;
+    }
+
+
+  </style>
+  <body>
+    <ul>
+      <li><a href="#" class="nav-link" data-target="#about">About Me</a></li>
+      <li><a href="#" class="nav-link" data-target="#hobbies">Hobbies</a></li>
+      <li><a href="#" class="nav-link" data-target="#classes">Classes</a></li>
+      <li><a href="#" class="nav-link" data-target="#reach">Reach Me</a></li>
+      <li><a href="#" class="nav-link" data-target="#styling">Styling</a></li>
+     <!--- <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#classes">Classes</a></li>  -->
+    </ul>
+    
+  <div id="about" class="page-section">
+    <div><h1>John Brown</h1></div>
+    <div class="profile-pic">
+      <img src="images/personalphoto.jpg" width="200" alt="Profile Picture">
+    </div>
+    <div>
+      <h3>About Me</h3>
+      <p> Hello! Im an Applied Computer Science major who loves tackling problems head on.
+      <p> I take pride in bringing positive energy to my work!
+      <p>Im excited to continue learning and growing as a developer! </p>
+    </div>
+  </div>
+
+  <div id="hobbies" class="page-section">
+    <h3>My Interests</h3>
+      <p>Fishing and getting outdoors! Live music and shows draw me in too.</p>
+      <p>Video games, I run a large gaming guild with my brother!</p>
+      <p>Spending time with my dogs, family, and friends. Usually around a grill.</p>
+    </div>
+
+  <div id="classes" class="page-section">
+    <h3>Summer Class List</h3>
+      <table>
+        <tr>
+          <th><p>Course Code</p></th>
+          <th><p>Course Name</p></th>
+        </tr>
+        <tr>
+          <td><p>CMPS262</p></td>
+          <td><p>Advanced Programming</p></td>
+        </tr>
+        <tr>
+          <td><p>CMPS260</p></td>
+          <td><p>Data Structures and Algorithms</p></td>
+        </tr>
+        <tr>
+          <td><p>Comm101</p></td>
+          <td><p>Oral Communication</p></td>
+        </tr>
+      </table>
+    </div>
+
+  <div id="reach" class="page-section">
+    <h4>How To Reach Me</h4>
+    <p> Email: john.brown@pointpark.edu</p>
+    <p> Phone: 412-736-2120</p>
+    <p> <a href="https://www.youtube.com/@JohnBrownedu">My Edu Youtube!</a></p>
+  </div>
+
+  <div id="styling" class="page-section">
+    <h3> Customize the Page!</h3>
+    <p>Select the font:</p>
+    <label><input type="radio" name="fontChoice" value="Arial, sans-serif" checked>Arial</label>
+    <label><input type="radio" name="fontChoice" value="'Courier New', monospace">Monospace</label>
+    <label><input type="radio" name="fontChoice" value="'Georgia', serif">Serif</label>
+
+    <p>Select Text Color:</p>
+    <select id="colorPick">
+      <option value="#244b81">Defualt Blue</option>
+      <option value="#8b0000">Dark Red</option>
+      <option value="#006400">Dark Green</option>
+      <option value="#000000">Black</option>
+    </select>
+  </div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $(".page-section").hide();
+    $("#about").show();
+
+    $(".nav-link").click(function(e) {
+      e.preventDefault();
+
+      var targetSection = $(this).data("target");
+
+      $(".page-section").hide();
+      $(targetSection).fadeIn(400);
+    });
+
+    $("input[name='fontChoice']").change(function() {
+      var selectedFont = $(this).val();
+      $("body").css("font-family", selectedFont);
+    });
+
+    $("#colorPick").change(function() {
+      var selectedColor = $(this).val();
+      $("body").css("color", selectedColor);
+    });
+  });
+
+</script>
+  </body>
+</html>
