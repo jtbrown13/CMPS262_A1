@@ -111,11 +111,18 @@
   </div>
 
   <div id="hobbies" class="page-section">
-    <h3>My Interests</h3>
+    <h3>My Hobbies!</h3>
       <p>Fishing and getting outdoors! Live music and shows draw me in too.</p>
       <p>Video games, I run a large gaming guild with my brother!</p>
       <p>Spending time with my dogs, family, and friends. Usually around a grill.</p>
-    </div>
+<br>
+<br>
+      <form id="form1" runat="server">
+        <div>
+          <img id="sldr" src="images/fishswim.gif" style="position: absolute" />
+        </div>
+      </form>
+  </div>
 
   <div id="classes" class="page-section">
     <h3>Summer Class List</h3>
@@ -187,8 +194,19 @@
       var selectedColor = $(this).val();
       $("body").css("color", selectedColor);
     });
+
+    function rgt() {
+      $('#sldr').animate({ left: "500px"}, 10000, hider);
+    }
+
+    rgt();
+
+    function hider() {
+      $('#sldr').css('left', '0px');
+      rgt();
+    }
   });
 
 </script>
-  </body>
+</body>
 </html>
