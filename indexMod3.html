@@ -58,6 +58,30 @@
       color:white;
     }
 
+    #colorPick {
+      background-color: #ffffff;
+      font-size: 16px;
+      padding: 4px;
+      color: #244b81;
+      border: none;
+      cursor: pointer;
+    }
+    
+    #colorPick:hover{
+      background-color: lightyellow;
+      border-radius: 20px;
+    }
+
+    #colorPick:focus{
+      border-color: lightblue;
+      border-width: 6px;
+    }
+
+    label input[type="radio"] {
+      accent-color: #244b81;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
 
   </style>
   <body>
@@ -116,7 +140,7 @@
     </div>
 
   <div id="reach" class="page-section">
-    <h4>How To Reach Me</h4>
+    <h3>How To Reach Me</h3>
     <p> Email: john.brown@pointpark.edu</p>
     <p> Phone: 412-736-2120</p>
     <p> <a href="https://www.youtube.com/@JohnBrownedu">My Edu Youtube!</a></p>
@@ -124,11 +148,12 @@
 
   <div id="styling" class="page-section">
     <h3> Customize the Page!</h3>
-    <p>Select the font:</p>
+    <p>Select The Font:</p>
     <label><input type="radio" name="fontChoice" value="Arial, sans-serif" checked>Arial</label>
     <label><input type="radio" name="fontChoice" value="'Courier New', monospace">Monospace</label>
     <label><input type="radio" name="fontChoice" value="'Georgia', serif">Serif</label>
-
+<br>
+<br>
     <p>Select Text Color:</p>
     <select id="colorPick">
       <option value="#244b81">Defualt Blue</option>
